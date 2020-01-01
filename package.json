@@ -1,0 +1,24 @@
+{
+  "name": "junipyr",
+  "version": "1.0.0",
+  "description": "A bot to send messages anonymously to a channel on a Discord server",
+  "main": "Run.js",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tagaroggu/Junipyr.git"
+  },
+  "author": "Logan Mortimer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tagaroggu/Junipyr/issues"
+  },
+  "homepage": "https://github.com/tagaroggu/Junipyr#readme"
+}
