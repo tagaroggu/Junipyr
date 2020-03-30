@@ -27,7 +27,7 @@ client.on("message", message => {
       //The first part/group is the server name, required to be in quotes,
       //The second is the channel name, which requires a #
       //The third is the message
-      let msg = message.content.match(/j!send "(.*)" (#\S*) (.*)/);
+      let msg = message.content.match(/j!send "(.*)" #(\S*) (.*)/);
       //Gets the server stuffs with the server name
       console.log(`Server: ${msg[1]}`);
       console.log(`Channel: ${msg[2]}`);
