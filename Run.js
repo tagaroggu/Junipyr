@@ -31,7 +31,7 @@ client.on("message", message => {
       //Gets the server stuffs with the server name
       let server = client.guilds.cache.filter(s => s.name === msg[1]);
       //If the server doesn't actually exist, or if the name is wrong
-      if (!server || !server.member(message.author)) {
+      if (!server || !server.members.cache.get(message.author.id)) {
         message.channel.send(`The server "${msg[1]}" wasn't found :/`);
         break;
       }
