@@ -29,6 +29,8 @@ client.on("message", message => {
       //The third is the message
       let msg = message.content.match(/j!send "(.*)" (#\S*) (.*)/);
       //Gets the server stuffs with the server name
+      console.log(`Server: ${msg[1]}`);
+      console.log(`Channel: ${msg[2]}`);
       let server = client.guilds.cache.filter(s => s.name === msg[1]);
       //If the server doesn't actually exist, or if the name is wrong
       if (!server) {
