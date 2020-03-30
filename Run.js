@@ -28,15 +28,12 @@ client.on("message", message => {
       //The second is the channel name, which requires a #
       //The third is the message
       let msg = message.content.match(/j!send "(.*)" #(\S*) (.*)/);
-      if (msg[1] === null || msg[2] === null || msg[3] === null) {
+      if (msg === null || msg[1] === null || msg[2] === null || msg[3] === null) {
         message.channel.send("uh, wat? did you type that correctly?");
         break;
       }
       //Gets the server stuffs with the server name
-      console.log(`Server: ${msg[1]}`);
-      console.log(`Channel: ${msg[2]}`);
       let server = client.guilds.cache.find(s => s.name === msg[1]);
-      console.log(`Returned server: ${server.name}`);
       //If the server doesn't actually exist, or if the name is wrong
       if (!server || !server.members.cache.find(a => a.id === message.author.id)) {
         message.channel.send(`The server "${msg[1]}" wasn't found :/`);
