@@ -9,8 +9,8 @@ const prefix = "j!";
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}.`);
   //Like the little status we can now put right under our names, but different
-  client.user.setActivity(`games, helping friends -- ${prefix}help`, {
-    type: "PLAYING"
+  client.user.setActivity(`${prefix}help`, {
+    type: "CUSTOM_STATUS"
   });
 });
 //Whenever the bot receives a message, such as in a channel, in DMs, etc.
