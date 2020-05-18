@@ -51,7 +51,9 @@ client.on("message", message => {
         message.channel.send(`Message sent :)\n${ms.url}`);
       });
       break;
-
+    case `${prefix}help`:
+      message.channel.send(`**${prefix}send**\nUse this command to send an anonymous message to a server\n${prefix}send "Server Name" \#channel-name message\nExample: ${prefix}send "Minecraft" \#general Hello there`);
+      break;
     default:
       message.channel.send(
         `I think you typed the wrong command, ${message.author.username}! >_<`
