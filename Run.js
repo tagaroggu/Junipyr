@@ -10,7 +10,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}.`);
   //Like the little status we can now put right under our names, but different
   client.user.setActivity(`${prefix}help`, {
-    type: "CUSTOM_STATUS"
+    type: "LISTENING"
   });
 });
 //Whenever the bot receives a message, such as in a channel, in DMs, etc.
